@@ -19,7 +19,7 @@ tinymce.init({
 
         	<div class="pageWise_TTL">
 
-            	<div class="pageName"><img src="<?php echo $admin_image_path; ?>bsns_icon1.png" alt=""> Add Testimonial</div>
+            	<div class="pageName"><img src="<?php echo $admin_image_path; ?>bsns_icon1.png" alt=""> Add Home Page Banner</div>
                 <div class="pageName" style="float:right;"> <a href="<?php  echo site_url(); ?>/backend/associations/add">Add New</a></div>
 
                <!-- <ul>
@@ -39,7 +39,7 @@ tinymce.init({
                                 </div>
 			<form name="add_properties" method="post" enctype="multipart/form-data">
             
-            <div class="frmFieldTTL"><span>ADD Testimonial</span></div>
+            <div class="frmFieldTTL"><span>Add Home Page Banner</span></div>
 
             <div class="frmFieldContent">
 
