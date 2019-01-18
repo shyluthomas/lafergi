@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.glossymenu{
+
+margin: 0px 0;
+
+padding: 0;
+
+width:100%; /*width of menu*/
+
+border-bottom-width: 0;
+
+}
+
+
+
+.glossymenu a.menuitem{
+
+/*background: black url(../../images/admin/glossyback.gif) repeat-x bottom left;*/
+
+background:#585858;
+
+font: bold 13px Arial;
+
+color: white;
+
+display: block;
+
+position: relative; /*To help in the anchoring of the ".statusicon" icon image*/
+
+width: auto;
+
+padding: 14px 0px 14px 0px;
+
+padding-left: 0px;
+
+text-decoration: none;
+
+margin-bottom:1px;
+
+}
+
+.glossymenu a.menuitem img{margin:0px 0px 0px 5px; padding:0px; width:18px; height:15px; }
+
+
+
+.glossymenu a.menuitem:visited, .glossymenu .menuitem:active{
+
+color: white; 
+
+}
+
+
+
+.glossymenu a.menuitem .statusicon{ /*CSS for icon image that gets dynamically added to headers*/
+
+position: absolute;
+
+top: 5px;
+
+right: -3px;
+
+border: none;
+
+width:38px; height:22px;
+
+}
+
+
+
+.glossymenu a.menuitem:hover{
+
+background:#585858;
+
+}
+
+
+
+.glossymenu div.submenu{ /*DIV that contains each sub menu*/
+
+background: #404040;
+
+}
+
+
+
+.glossymenu div.submenu ul{ /*UL of each sub menu*/
+
+list-style-type: none;
+
+margin: 0;
+
+padding: 0;
+
+}
+
+
+
+.glossymenu div.submenu ul li{
+
+
+
+}
+
+
+
+.glossymenu div.submenu ul li a{
+
+display: block;
+
+font: normal 13px "Arial";
+
+color: #949090;
+
+text-decoration: none;
+
+padding: 8px 0px 8px 20px;
+
+}
+
+
+
+.glossymenu div.submenu ul li a:hover{
+
+
+color: #fff;
+
+}

@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/*---------------------------------------------------
+
+Project: MEANDMYWEDDING.COM - Master Login Page
+
+Date: Dec 13 2012
+
+Author: Niyas Khan
+
+---------------------------------------------------*/
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+
+audio, canvas, video { display: inline-block; }
+
+audio:not([controls]) { display: none; }
+
+[hidden] { display: none; }
+
+
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+
+
+body { margin: 0;  padding:0; background:url(../../images/admin/LoginBG.png) no-repeat center top;}
+
+#wrapper {margin:0px; padding:0px; width:100%; height:100%; background-color:#005092; }
+
+#mainhead {margin:0px auto; padding:0px; width:100%; height:73px; background-color:#202020;}
+
+#mainhead img {margin:12px 0px 0px 22px; padding:0px; width:142px; height:47px; border:none;}
+
+.loginBand {margin:0px auto; margin-top:135px; padding:0px; width:546px; height:374px; background:#ebebeb url(../../images/admin/glow.png) no-repeat center top; -moz-border-radius:8px; -webkit-border-radius:8px; -o-border-radius:8px; -ms-border-radius:8px; border-radius:8px; border:solid 1px #e0dfdf;}
+
+.loginBand h1 {margin:0px auto; padding:30px 0px 0px 0px; width:100%; height:51px; font:normal 20px "Arial"; color:#707070; text-shadow: -1px -1px white, 1px 1px #d6d6d6; text-align:center;}
+
+.loginBand .content {margin:0px auto; padding:0px; width:100%; height:290px; background:url(../../images/admin/login_content.png) no-repeat center top;}
+
+.content .fullContent {margin:0px auto; padding:60px 0px 0px 0px; width:325px; height:auto; overflow:hidden;}
+
+.username{margin:0px; padding:0px 44px 0px 14px; width:267px;/*325*/ height:36px;/*36*/ background:url(../../images/admin/username.png) no-repeat center top; border:none; font:normal 13px "Arial"; color:#7b8b9a; font-weight:bold; }
+
+.password{margin:0px; margin-top:24px; padding:0px 44px 0px 14px; width:267px;/*325*/ height:36px;/*36*/ background:url(../../images/admin/password.png) no-repeat center top; border:none; font:normal 13px "Arial"; color:#7b8b9a; font-weight:bold; }
+
+.loginOtherItems{margin:0px auto; padding:33px 0px 0px 0px; width:325px; height:auto; overflow:hidden;}
+
+.rememberArea{margin:0px; padding:8px 0px 0px 0px; width:225px; height:36px; float:left;}
+
+.rememberArea .checkbox {margin:0px 0px 0px 0px; padding:0px;}
+
+.rememberArea .label {margin:0px; padding:0px 0px 0px 5px; font:normal 13px "Arial"; color:#7b8b9a; font-weight:bold;}
+
+.btnSignIn {
+
+	font:normal 13px "Arial"; color: #FFF; font-weight:bold;
+
+	border: none; cursor:pointer;
+
+    width:91px; height:37px;
+
+    padding: -5px 0px 0px 0px;
+
+	float:right;
+
+	background:url(../../images/admin/btnSignIn.png) no-repeat top left;
+
+	}
+
+.btnSignIn:hover {
+
+	font:normal 13px "Arial"; color: #FFF; font-weight:bold;
+
+	border: none; cursor:pointer;
+
+    width:91px; height:37px; 
+
+    padding: 0px 0px 0px 0px;
+
+	float:right;
+
+	background:url(../../images/admin/btnSignIn_over.png) no-repeat top left;
+
+	}
+
+
+
+#loginFooter {margin:0px auto; padding:25px 0px 0px 0px; width:100%; height:52px; font:normal 12px "Arial"; color:#989898; line-height:18px; position:fixed; bottom:0; text-align:center;}
+
+#loginFooter a{font:normal 12px "Arial"; color:#989898; line-height:18px; text-decoration:none;}
+
+#loginFooter a:hover{font:normal 12px "Arial"; color:#666666; line-height:18px; text-decoration:none;}

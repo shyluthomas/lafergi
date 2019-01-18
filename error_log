@@ -1,0 +1,5 @@
+[07-Feb-2015 06:31:12 UTC] PHP Fatal error:  Call to undefined method Packages_model::get_all_search() in /home/gladtechnologies/public_html/vacanzamondiale.com/application/controllers/packages.php on line 120
+[07-Feb-2015 06:31:18 UTC] PHP Fatal error:  Call to undefined method Packages_model::get_all_search() in /home/gladtechnologies/public_html/vacanzamondiale.com/application/controllers/packages.php on line 120
+[07-Feb-2015 06:31:29 UTC] PHP Fatal error:  Call to undefined method Packages_model::get_all_search() in /home/gladtechnologies/public_html/vacanzamondiale.com/application/controllers/packages.php on line 120
+[07-Feb-2015 06:31:47 UTC] PHP Fatal error:  Call to undefined method Packages_model::get_all_search() in /home/gladtechnologies/public_html/vacanzamondiale.com/application/controllers/packages.php on line 120
+[07-Feb-2015 06:32:00 UTC] PHP Fatal error:  Cannot redeclare Packages_model::get_all() in /home/gladtechnologies/public_html/vacanzamondiale.com/application/models/packages_model.php on line 35
