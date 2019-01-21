@@ -248,19 +248,7 @@
 
 						</div>
                         
-                        <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
-                    Gallery</a>
-
-						<div class="submenu">
-
-						<ul>
-
-						<li><a href="<?php echo site_url(); ?>/backend/gallery/">Manage Gallery</a></li>
-						
-						</ul>
-
-						</div>
-                        
+                                                
                         
 
                 	<?php /*?><a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
@@ -301,20 +289,7 @@
 
 						</div>
                         
-                        <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_HomeMangment.png" alt="">&nbsp Hotel Directory </a>
-
-						<div class="submenu">
-
-						<ul>
-						<li><a href="<?php echo site_url(); ?>/backend/hoteldirectory/">Manage Hotel Directory</a></li>
-						
-						
-
-						</ul>
-
-						</div>
-                        
-                     
+                                            
                         
                          <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_HomeMangment.png" alt="">&nbsp 
                       Terms & use </a>
@@ -348,7 +323,7 @@
 
             	<td class="tblFooter">
 
-                © <a href="<?php echo base_url();?>" target="_blank">www.vacanzamondiale.com</a> - 2013 <br>
+                © <a href="<?php echo base_url();?>" target="_blank">www.bluecrescentllc.com</a> - 2019 <br>
 
 				Powered by <a href="#" target="_blank">Qatar Readymix LLC</a>
 

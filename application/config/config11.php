@@ -30,8 +30,8 @@
 
 */
 
-$config['base_url']= 'http://vaddychurch.com';
-$config['site_url']= 'http://vaddychurch.com/index.php';
+$config['base_url']= 'http://holcim.bluecrescentllc.com/';
+$config['site_url']= 'http://holcim.bluecrescentllc.com/index.php';
 
 
 
@@ -55,7 +55,7 @@ $config['site_url']= 'http://vaddychurch.com/index.php';
 
 */
 
-$config['index_page'] = 'auto';
+$config['index_page'] = 'index.php';
 
 
 
@@ -720,4 +720,3 @@ $config['proxy_ips'] = '';
 /* End of file config.php */
 
 /* Location: ./application/config/config.php */
-

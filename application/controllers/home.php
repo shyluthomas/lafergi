@@ -29,8 +29,9 @@ class Home extends CI_Controller {
 		  $this->load->library('twitterfetcher');
 		
 	// $this->load->model('packages_model','package');
-	// $this->load->model('destination_model','destination');
-	 // $this->load->model('packagecatagory_model','catagory');
+	$this->load->model('home_model','home');
+	  $this->load->model('home_banner_model','home_banner');
+          $this->load->model('solutions_model','solutions');
 		 
 		//-----------------general detail----------------------	
 		
@@ -46,7 +47,9 @@ class Home extends CI_Controller {
 		
 		
 		// data home package
-		//$this->data['package']=$this->package->limit(8,0)->get_all();
+		$this->data['home_banner']=$this->home_banner->limit(8,0)->get_all();
+        $this->data['home_content']=$this->home->get_all()[0];
+         $this->data['solutions']=$this->solutions->limit(10,0)->get_all();
 		
 		// data home destination
 		//$this->data['destination']=$this->destination->limit(8,0)->get_all();

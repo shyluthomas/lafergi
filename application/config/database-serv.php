@@ -100,11 +100,11 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 
-$db['default']['username'] = 'joshyv_vacanzamo';
+$db['default']['username'] = 'ahammcid_lafergi';
 
-$db['default']['password'] = 'o)t)w0{5Lk5]';
+$db['default']['password'] = ')!Qu_{yPYWC1';
 
-$db['default']['database'] = 'joshyv_vacanza';
+$db['default']['database'] = 'ahammcid_bluecrescentllc';
 
 $db['default']['dbdriver'] = 'mysql';
 

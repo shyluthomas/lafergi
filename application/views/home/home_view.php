@@ -43,15 +43,16 @@ $image_path = base_url().'images/';
     <?php $this->load->view('include/header');?>
     
     <div class="slider" id="slider">
+         <?php $i=0;  foreach($home_banner as $banner): ?>
         <!-- slider -->
-        <div class="slider-img"><img src="<?php echo $asset_path; ?>images/slider-1.jpg" alt="Qatar Readymix LLC" class="">
+        <div class="slider-img"><img src="<?php echo $asset_path_backend; ?>images/home_banner/<?php echo $banner['image'];?>" alt="Qatar Readymix LLC" class="">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                         <div class="slider-captions">
                             <!-- slider-captions -->
-                            <h1 class="slider-title">Lorem Ipsum is simply dummy </h1>
-                            <p class="slider-text d-none d-xl-block d-lg-block d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                            <h1 class="slider-title"><?php echo $banner['title']; ?> </h1>
+                            <p class="slider-text d-none d-xl-block d-lg-block d-sm-block"> <?php echo $banner['content']; ?></p>
                                 
                                  </div>
                         <!-- /.slider-captions -->
@@ -59,38 +60,8 @@ $image_path = base_url().'images/';
                 </div>
             </div>
         </div>
-        <div>
-            <div class="slider-img"><img src="<?php echo $asset_path; ?>images/slider-2.jpg" alt="Qatar Readymix LLC" class="">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="slider-captions">
-                                <!-- slider-captions -->
-                                <h1 class="slider-title">Lorem Ipsum is simply dummy  </h1>
-                                <p class="slider-text d-none d-xl-block d-lg-block d-sm-block"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-                                 </div>
-                            <!-- /.slider-captions -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="slider-img"><img src="<?php echo $asset_path; ?>images/slider-3.jpg" alt="Qatar Readymix LLC" class="">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="slider-captions">
-                                <!-- slider-captions -->
-                                <h1 class="slider-title">orem Ipsum is simply dummy text of</h1>
-                                <p class="slider-text d-none d-xl-block d-lg-block d-sm-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-                                 </div>
-                            <!-- /.slider-captions -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     <?php endforeach;?>
+        
     </div>
    
     <div class="section-space80">
@@ -99,8 +70,8 @@ $image_path = base_url().'images/';
                 <div class="offset-xl-2 col-xl-8 offset-md-2 col-md-8 offset-md-2 col-md-8 col-sm-12 col-12">
                     <div class="mb60 text-center section-title">
                         <!-- section title start-->
-                        <h1>Welcome To Readymix Qatar LLC</h1>
-                        <p class="text-justify"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                        <h1><?php echo $home_content['title']?>Welcome To Readymix Qatar LLC</h1>
+                        <p class="text-justify"> <?php echo $home_content['content']?> </p>
                     </div>
                     
                     <div class="mb60 text-center section-title">
@@ -114,41 +85,22 @@ $image_path = base_url().'images/';
             <div class="row">
              
                 <div class="service" id="service">
+                    
+                     <?php $i=0;  foreach($solutions as $solution): ?>
+                    
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="bg-white pinside40 service-block outline mb30">
-            <div class="icon mb40"> <img src="<?php echo $asset_path; ?>images/solution1.png" alt="Mixed-use Developments"> </div>
-                            <h2><a href="#" class="title">Lorem Ipsum is simply dummy</a></h2>
-                            <p> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+            <div class="icon mb40"> <img src="<?php echo $asset_path_backend; ?>images/solutions/thump/<?php echo $solution['image'];?>" alt="Mixed-use Developments"> </div>
+                            <h2><a href="#" class="title"><?php echo $solution['title'];?></a></h2>
+                            <p> <?php echo $solution['description']?> </p>
                             <a href="#" class="btn-link">Read More</a> </div>
                     </div>
-                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="bg-white pinside40 service-block outline mb30">
-            <div class="icon mb40"> <img src="<?php echo $asset_path; ?>images/solution1.png" alt="Mixed-use Developments"> </div>
-                            <h2><a href="#" class="title">Lorem Ipsum is simply dummy</a></h2>
-                            <p>text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-                            <a href="#" class="btn-link">Read More</a> </div>
-                    </div>
-                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="bg-white pinside40 service-block outline mb30">
-            <div class="icon mb40"> <img src="<?php echo $asset_path; ?>images/solution1.png" alt="Mixed-use Developments"> </div>
-                            <h2><a href="#" class="title">Lorem Ipsum is simply dummy</a></h2>
-                            <p>text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            <a href="#" class="btn-link">Read More</a> </div>
-                    </div>
-                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="bg-white pinside40 service-block outline mb30">
-            <div class="icon mb40"> <img src="<?php echo $asset_path; ?>images/solution1.png" alt="Mixed-use Developments"> </div>
-                            <h2><a href="#" class="title">Lorem Ipsum is simply dummy</a></h2>
-                            <p>text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-                            <a href="#" class="btn-link">Read More</a> </div>
-                    </div>
-                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="bg-white pinside40 service-block outline mb30">
-            <div class="icon mb40"> <img src="<?php echo $asset_path; ?>images/solution1.png" alt="Mixed-use Developments"> </div>
-                            <h2><a href="#" class="title">Lorem Ipsum is simply dummy</a></h2>
-                            <p>text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                            <a href="#" class="btn-link">Read More</a></div>
-                    </div>
+                    
+                  <?php endforeach; ?>  
+                  
+                  
+                  
+                 
                 </div>
             </div>
         </div>
