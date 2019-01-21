@@ -2,194 +2,110 @@
 $asset_path = base_url().'assets/frontend/';
 $asset_path_backend = base_url().'assets/backend/';
 
-$test = @mysql_query("select * from tbl_testimonial limit 1");
-if(@mysql_num_rows($test)>0){
-	
-	$testDt = @mysql_fetch_object($test);	
-}
+//$test = @mysql_query("select * from tbl_testimonial limit 1");
+//if(@mysql_num_rows($test)>0){
+//	
+//	$testDt = @mysql_fetch_object($test);	
+//}
 ?>
-	<!-- START footer -->
-			<footer>
-				<!-- START #ft-footer -->
-				<div id="ft-footer">
-					<div class="footer-overlay">
-						<div class="container">
-							<div class="row">
-								<!-- testimonials -->
-								<section class="col-md-6">
-									<h3>Testimonials</h3>
-									<p><?php echo substr($testDt->content,0,200);?></p>
-									<div class="tl-author">
-										<span class="tl-author-img">
-											<img class="img-circle" src="<?php echo $asset_path_backend;?>images/testimonials/<?php echo $testDt->image;?>" alt="Testimonial Author" height="55px" />
-										</span>
-										<span class="tl-author-title"><?php echo $testDt->title;?></span>
-										<span class="tl-author-desc"></span>
-									</div>
-								</section>
-								
-								<!-- twitter -->
-								<section class="col-md-6">
-									<h3 class="tw-feeds">Twitter Feeds</h3>
-									<p>
-                                    
-                                    <?php 
-									
-									if(count($twitterFeed)== 0){
-									echo 'Twitter feed Not available..';	
-									}
-									else
-									echo @$twitterFeed[0];?>
-                                    </p>
-									
-								  <a href="#"></a></p>
-							  </section>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- END #ft-footer -->
-				
-				<!-- START #ex-footer -->
-				<div id="#ex-footer">
-					<div class="container">
-						<div class="row">
-							<nav class="col-md-12">
-								<ul class="footer-menu">
-									<li><a href="http://europe-tourism.org/">Beast Europe</a></li>
-									<li><a href="http://www.visiteurope.com/home.aspx">visit Europe</a></li>
-									<li><a href="http://www.myswitzerland.com/en-in/accommodation/hotels.html">Hotel Directory</a></li>
-									<li><a href="#">Website Terms of Use</a></li>
-									<li><a href="#">Privacy Statement</a></li>
-									
-									<li class="last-item"><a href="http://vacanzamondiale.com/index.php/destination/">Top Destinations</a></li>
-								</ul>
-							</nav>
-							
-							<div class="foot-boxs">
-								<div class="foot-box col-md-4 text-right">
-									<span>Stay Connected</span>
-									<ul class="social-media footer-social">
-										<li><a class="sm-yahoo" href="https://www.youtube.com/user/VacanzaMondiale"><span>Youtube</span></a></li>
-										<li><a class="sm-facebook" href="https://www.facebook.com/VacanzaMondiale"><span>Facebook</span></a></li>
-									<!--	<li><a class="sm-rss" href="#"><span>RSS</span></a></li>-->
-										<li><a class="sm-flickr" href="https://twitter.com/vacanzamondiale"><span>Twitter</span></a></li>
-										<!--<li><a class="sm-windows" href="#"><span>Windows</span></a></li>
-										<li><a class="sm-stumble" href="#"><span>Stumbleupon</span></a></li>-->
-									</ul>
-								</div>
-								<div class="foot-box foot-box-md col-md-4">
-									<span class="contact-email"> info@vacanzamondiale.com</span>
-									<span class="contact-phone"> +39-329-3323644</span>
-								</div>
-								<div class="foot-box col-md-4">
-									<span class="">&copy; 2014 vacanzamondiale. All Rights Reserved.</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- END #ex-footer -->
-			</footer>
-			<!-- END footer -->
-		</div>
-		<!-- END #wrapper -->
+<div class="footer section-space50">
+        <!-- footer -->
+        <div class="container">
 
-		
-
-
-
-		<!-- javascripts -->
-		<script type="text/javascript" src="<?php echo $asset_path;?>js/modernizr.custom.17475.js"></script>
-
-		<script type="text/javascript" src="<?php echo $asset_path;?>js/jquery.min.js"></script>
-		<script type="text/javascript" src="<?php echo $asset_path;?>bs3/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="<?php echo $asset_path;?>js/bootstrap-datepicker.js"></script>
-		<script src="<?php echo $asset_path;?>js/jquery.flexslider-min.js"></script>
-		<script src="<?php echo $asset_path;?>js/script.js"></script>
-		<script src="<?php echo $asset_path;?>js/jquery.minimalect.min.js" type="text/javascript"></script>
-
-		<script src="<?php echo $asset_path;?>js/styleswitcher.js"></script>
-		
-		<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
-		<script type="text/javascript" src="<?php echo $asset_path;?>js/rs-plugin/js/jquery.plugins.min.js"></script>
-		<script type="text/javascript" src="<?php echo $asset_path;?>js/rs-plugin/js/jquery.revolution.min.js"></script>
-
-		<!--[if lt IE 9]>
-			<script type="text/javascript" src="js/html5shiv.js"></script>
-		<![endif]-->
-
-
-		<script type="text/javascript">
-		$(document).ready(function() {
-			// revolution slider
-			revapi = $("#content-slider").revolution({
-				delay: 15000,
-				startwidth: 1170,
-				startheight: 920,
-				hideThumbs: 10,
-				fullWidth: "on",
-				fullScreen: "off",
-				fullScreenOffsetContainer: "",
-				navigationVOffset: 320
-			});
-			
-			// initilize datepicker
-			$(".date-picker").datepicker();
-		});
-
-
-	    $(window).load(function(){
-	      $('.carousel').flexslider({
-			animation: "fade",
-			animationLoop: true,
-			controlNav: false,	
-		    maxItems: 1,
-			pausePlay: false,
-			mousewheel:true,
-			start: function(slider){
-			  $('body').removeClass('loading');
-			}
-	      });
-	    });
-
-
-		</script>
-		<script>
-		$(document).ready(function(){
-			$("#adults").minimalect({ theme: "bubble", placeholder: "Select" });
-			$("#kids").minimalect({ theme: "bubble", placeholder: "Select" });
-		});
-		</script><!--- SELECT BOX -->
-		
-		<!-- Analytics -->
-        
-        <script type="text/javascript" src="<?php echo $asset_path;?>js/jquery.easing.js"></script>
-		<script type="text/javascript" src="<?php echo $asset_path;?>js/jquery.fancybox.js"></script>
-		<script type="text/javascript" src="<?php echo $asset_path;?>js/script.js"></script>
-		<script src="<?php echo $asset_path;?>js/styleswitcher.js"></script>
-		<!--[if lt IE 9]>
-			<script type="text/javascript" src="js/html5shiv.js"></script>
-		<![endif]-->
-
-		<script type="text/javascript">
-		$(document).ready(function() {
-			
-			// initilize fancybox
-			$(".item-overlay").fancybox({
-				overlayShow: true,
-				overlayOpacity: .7,
-				overlayColor: "#000000", // background overlay color
-				transitionIn: "fade", // transition type 'elastic', 'fade' or 'none'
-				transitionOut: "fade",
-				easingIn: "easeInCubic", // Easing used for elastic animations
-				easingOut: "easeOutCubic",
-				cyclic: true
-			});
-		});
-		</script>
-		
-	</body>
-
-<!-- Mirrored from extracoding.com/html/travelhub/index.html by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 12 Jun 2014 06:00:36 GMT -->
-</html>
+            <hr class="dark-line">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="widget-text mt40">
+                        <!-- widget text -->
+                        
+                        
+                <div class="footer-logo">
+                        <!-- Footer Logo -->
+                        <img src="images/ft-logo.png" alt="Qatar Readymix LLCs">
+                    <!-- /.Footer Logo -->
+                </div>
+                        
+                        
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <p class="address-text"><span><i class="icon-placeholder-3 icon-1x"></i> </span>Building No 385
+Street no 380 <br>Zone no 32 Al Markhyia Street Madinet Khalifa </p>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <p class="call-text"><span><i class="icon-phone-call icon-1x"></i></span>+974 44341798</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.widget text -->
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                    <div class="widget-footer mt40">
+                        <!-- widget footer -->
+                        <ul class="listnone">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="solutions.html">Our Solution</a></li>
+                            <li><a href="products.html">Our Products</a></li>
+                            <li><a href="career.html">Career</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.widget footer -->
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                    <div class="widget-footer mt40">
+                        <!-- widget footer -->
+                        <ul class="listnone">
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Safety</a></li>
+                            <li><a href="#">Environment</a></li>
+                            <li><a href="#">Road Transport</a></li>
+                            <li><a href="#">Policy</a></li>
+                            <li><a href="#">Welfare</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.widget footer -->
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                    <div class="widget-social mt40">
+                        <!-- widget footer -->
+                        <ul class="listnone">
+                            <li><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i>Google Plus</a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i>Linked In</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.widget footer -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.footer -->
+    <div class="tiny-footer">
+        <!-- tiny footer -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                    <p>© Copyright 2019 | Qatar Readymix LLC</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- back to top icon -->
+    <a href="#0" class="cd-top" title="Go to top">Top</a>
+<script src="<?php echo $asset_path; ?>js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="<?php echo $asset_path; ?>js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo $asset_path; ?>js/menumaker.js"></script>
+  
+    <!-- sticky header -->
+    <script type="text/javascript" src="<?php echo $asset_path; ?>js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="<?php echo $asset_path; ?>js/sticky-header.js"></script>
+    <!-- slider script -->
+    <script type="text/javascript" src="<?php echo $asset_path; ?>js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="<?php echo $asset_path; ?>js/slider-carousel.js"></script>
+    <script type="text/javascript" src="<?php echo $asset_path; ?>js/service-carousel.js"></script>
+    <!-- Back to top script -->
+    <script src="<?php echo $asset_path; ?>js/back-to-top.js" type="text/javascript"></script>

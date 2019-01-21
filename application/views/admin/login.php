@@ -20,7 +20,7 @@ $image_path = base_url().'images/';
 
 <![endif]-->
 
-<title>Login to Master Admin - vaddychurch</title>
+<title>Login to Master Admin - Qatar Readymix LLC</title>
 
 <meta name="viewport" content="width=device-width">
 
@@ -52,7 +52,7 @@ $image_path = base_url().'images/';
 
 <header id="mainhead">
 
-	<a href="<?php echo site_url();?>/admin/login"><img src="<?php echo $asset_path;?>images/admin/logo.jpg" alt="Gladtechnologies"></a>
+	<a href="<?php echo site_url();?>/admin/login"><img src="<?php echo $asset_path;?>images/admin/logo.png" alt="Qatar Readymix LLC"></a>
 
 </header>
 
@@ -104,7 +104,7 @@ $image_path = base_url().'images/';
 
 <footer id="loginFooter">
 
-	© <a href="<?php echo base_url();?>" target="_blank">Gladtechnologies.com</a> - 2013 <br>Powered by <a href="http://www.gladtechnologies.com/" target="_blank">Gladtechnologies/</a>
+	© <a href="<?php echo base_url();?>" target="_blank">Qatar Readymix LLC</a> - 2013 <br>Powered by <a href="#" target="_blank">Qatar Readymix LLC/</a>
 
 </footer>
 

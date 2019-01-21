@@ -1,4 +1,6 @@
 // JavaScript Document
+var imgsrc_down = 'http://'+window.location.hostname + '/vacanza/assets/backend/js/admin/arrow_down.png';
+var imgsrc_up = 'http://'+window.location.hostname + '/vacanza/assets/backend/js/admin/arrow_up.png';
 
 ddaccordion.init({
 
@@ -22,7 +24,7 @@ ddaccordion.init({
 
 	toggleclass: ["", ""], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
 
-	togglehtml: ["suffix", "<img src='http://198.1.74.28/~spaniac1/imyrtle/images/admin/arrow_down.png' class='statusicon' />", "<img src='http://198.1.74.28/~spaniac1/imyrtle/images/admin/arrow_up.png' class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	togglehtml: ["suffix", "<img src="+ imgsrc_down +" class='statusicon' />", "<img src="+ imgsrc_up +" class='statusicon' />"], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
 
 	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
 

@@ -148,29 +148,73 @@
 						</ul>
 
 						</div>
-                        
-                        
-                         <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
-                    About</a>
+                    
+                    <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
+                    About us</a>
 
 						<div class="submenu">
 
 						<ul>
 
-						<li><a href="<?php echo site_url(); ?>/backend/about/">Manage About</a></li>
+						<li><a href="<?php echo site_url(); ?>/backend/who_we_are/">Manage who we are</a></li>
+                        <li><a href="<?php echo site_url(); ?>/backend/what_we_offer/">Manage what we offer</a></li>
+                        <li><a href="<?php echo site_url(); ?>/backend/vision_mission/">Manage vision and mission</a></li>
+						
+						</ul>
+                            
+
+						</div>
+                        
+                        
+                        
+                        
+                         <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
+                    Products</a>
+
+						<div class="submenu">
+
+						<ul>
+
+						<li><a href="<?php echo site_url(); ?>/backend/products/">Manage Prodcuts</a></li>
+						
+						</ul>
+
+						</div>
+                     
+                    <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
+                    Solutions</a>
+
+						<div class="submenu">
+
+						<ul>
+
+						<li><a href="<?php echo site_url(); ?>/backend/solutions/">Manage Solutions</a></li>
 						
 						</ul>
 
 						</div>
                         
                           <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
-                    Manage Package Catagory</a>
+                    Manage Careers</a>
 
 						<div class="submenu">
 
 						<ul>
 
-						<li><a href="<?php echo site_url(); ?>/backend/packageCatagory/add">Manage Package Catagory</a></li>
+						<li><a href="<?php echo site_url(); ?>/backend/Careers/">Manage Careers</a></li>
+						
+						</ul>
+
+						</div>
+                    
+                     <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
+                    Manage Contact</a>
+
+						<div class="submenu">
+
+						<ul>
+
+						<li><a href="<?php echo site_url(); ?>/backend/contact/">Manage Contact</a></li>
 						
 						</ul>
 
@@ -306,7 +350,7 @@
 
                 © <a href="<?php echo base_url();?>" target="_blank">www.vacanzamondiale.com</a> - 2013 <br>
 
-				Powered by <a href="#" target="_blank">Gladtechnologies</a>
+				Powered by <a href="#" target="_blank">Qatar Readymix LLC</a>
 
                 </td>
 

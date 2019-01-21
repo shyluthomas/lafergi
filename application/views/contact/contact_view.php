@@ -3,212 +3,201 @@ $asset_path = base_url().'assets/frontend/';
 $asset_path_backend = base_url().'assets/backend/';
 
 $image_path = base_url().'images/';
-//var_dump($package);exit();
+//var_dump($twitterFeed);exit();
 ?>
 
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
-	<!-- START head -->
-	
-<!-- Mirrored from extracoding.com/html/travelhub/gallery.html by HTTrack Website Copier/3.x [XR&CO'2013], Thu, 12 Jun 2014 06:01:32 GMT -->
+
 <head>
-		<!-- Site meta charset -->
-		<meta charset="UTF-8">
-		
-		<!-- title -->
-		<title>Gallery | Travel Hub HTML5 Template</title>
-		
-		<!-- meta description -->
-		<meta name="description" content="YOUR META DESCRIPTION GOES HERE" />
-		
-		<!-- meta keywords -->
-		<meta name="keywords" content="YOUR META KEYWORDS GOES HERE" />
-		
-		<!-- meta viewport -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-		
-		<!-- favicon -->
-		<link rel="icon" href="favicon.html" type="image/x-icon" />
-		<link rel="shortcut icon" href="favicon.html" type="image/x-icon" />
-		
-		<!-- bootstrap 3 stylesheets -->
-		<link rel="stylesheet" type="text/css" href="<?php echo $asset_path; ?>bs3/css/bootstrap.css" media="all" />
-		<!-- template stylesheet -->
-		<link rel="stylesheet" type="text/css" href="<?php echo $asset_path; ?>css/styles.css" media="all" />
-		<!-- fancybox stylesheet -->
-		<link rel="stylesheet" type="text/css" href="<?php echo $asset_path; ?>css/fancybox/jquery.fancybox.css" media="all" />
-		<!-- responsive stylesheet -->
-		<link rel="stylesheet" type="text/css" href="<?php echo $asset_path; ?>css/responsive.css" media="all" />
-		<!-- Load Fonts via Google Fonts API -->
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Karla:400,700,400italic,700italic" />
-		<!-- color scheme -->
-		<link rel="stylesheet" type="text/css" href="<?php echo $asset_path; ?>css/colors/color1.css" title="color1" />
-		<link rel="alternate stylesheet" type="text/css" href="<?php echo $asset_path; ?>css/colors/color2.css" title="color2" />
-		<link rel="alternate stylesheet" type="text/css" href="<?php echo $asset_path; ?>css/colors/color3.css" title="color3" />
-		<link rel="alternate stylesheet" type="text/css" href="<?php echo $asset_path; ?>css/colors/color4.css" title="color4" />
-        
-        <script>
-		function validatemail(){
-			
-		if(document.getElementById('name').value == ''){
-			//$('$validat').html('Please fill the Name');
-			alert('Please fill the Name');
-			return false;
-		}
-		}
-		
-		</script>
-		
-	</head>
-	<!-- END head -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Qatar Readymix LLC">
+    <meta name="keywords" content="Financial Website Template, Bootstrap Template, Loan Product, Personal Loan">
+    <title>Home | Qatar Readymix LLC</title>
+    <!-- Bootstrap -->
+    <link href="<?php echo $asset_path; ?>css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo $asset_path; ?>css/style.css" rel="stylesheet">
+    <link href="<?php echo $asset_path; ?>css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo $asset_path; ?>css/fontello.css" rel="stylesheet">
+   
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- owl Carousel Css -->
+    <link href="<?php echo $asset_path; ?>css/owl.carousel.css" rel="stylesheet">
+    <link href="<?php echo $asset_path; ?>css/owl.theme.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
 
-	<!-- START body -->
-	<body>
-		<!-- START #wrapper -->
-		<div id="wrapper">
-			<!-- START header -->
-			
-				<!-- START #main-header -->
-				<?php $this->load->view('include/header');?>
-				<!-- END #main-header -->
-		
-			<!-- END header -->
-			
-			<!-- START #page-header -->
-			<div id="header-banner">
-				<div class="banner-overlay">
-					<div class="container">
-						<div class="row">
-							<section class="col-sm-6">
-								<h1 class="text-upper">Gallery</h1>
-							</section>
-							
-							<!-- breadcrumbs -->
-							<section class="col-sm-6">
-								<ol class="breadcrumb">
-									<li class="home"><a href="<?php echo site_url();?>">Home</a></li>
-									
-									<li class="active">Contact</li>
-								</ol>
-							</section>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- END #page-header -->
-			
-			<!-- START .main-contents -->
-			<div class="main-contents">
-				<div class="container">
-					<div class="row">
-						<!-- START #page -->
-						<div id="page" class="col-md-8">
-							<!-- GOOGLE MAP -->
-							<section id="contactMap">
-								<iframe src="https://www.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=uk&amp;aq=&amp;sll=18.312811,-4.306641&amp;sspn=46.292419,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=United+Kingdom&amp;ll=52.352119,-2.647705&amp;spn=0.685471,1.352692&amp;t=p&amp;z=10&amp;output=embed"></iframe>							
-							</section>
-							
-							<!-- START #contactForm -->
-							<section id="contactForm">
-								<h2 class="ft-heading text-upper">If You need further details - Please write us</h2>
-                                <h3 style="color:#093;" id="validat"><?php if(@$sent){echo 'Mail has been Sent..';}?></h3>
-								<form action="" method="post" name="contact" onSubmit="return validatemail();">
-									<fieldset>
-										<ul class="formFields list-unstyled">
-											<li class="row">
-												<div class="col-md-6">
-													<label>Name <span class="required small">(Required)</span></label>
-													<input type="text" class="form-control" name="name" value="" id="name" />
-												</div>
-												<div class="col-md-6">
-													<label>Email <span class="required small">(Required)</span></label>
-													<input type="text" class="form-control" name="email" value="" id="email"/>
-												</div>
-											</li>
-											<li class="row">
-												<div class="col-md-12">
-													<label>Subject <span class="required small">(Required)</span></label>
-													<input type="text" class="form-control" name="subject" value="" />
-												</div>
-											</li>
-											<li class="row">
-												<div class="col-md-12">
-													<label>Message <span class="required small">(Required)</span></label>
-													<textarea class="form-control" name="message"></textarea>
-												</div>
-											</li>
-											<li class="row">
-												<div class="col-md-12">
-													<input type="submit" class="btn btn-primary btn-lg text-upper" name="submit" value="Submit" />
-													<span class="required small">*Your email will never published.</span>
-												</div>
-											</li>
-										</ul>
-									</fieldset>
-								</form>
-							</section>
-							<!-- END #contactForm -->
-						</div>
-						<!-- END #page -->
-						
-						<!-- START #sidebar -->
-						<aside id="sidebar" class="col-md-4">
-							<div class="sidebar-widget">
-								<!-- Sidebar Social Icons -->
-								<ul class="sidebar-social list-unstyled">
-									<li class="facebook">
-										<a href="https://www.facebook.com/VacanzaMondiale">
-											<span class="sc-count text-center">28,096</span>
-											<span class="sc-text text-center">fans &amp; likes</span>
-										</a>
-									</li>
-									<li class="twitter">
-										<a href="https://twitter.com/vacanzamondiale">
-											<span class="sc-count text-center">8,096</span>
-											<span class="sc-text text-center">Followers</span>
-										</a>
-									</li>
-									<li class="rss">
-										<a href="https://www.youtube.com/user/VacanzaMondiale">
-											<span class="sc-count text-center">12,096</span>
-											<span class="sc-text text-center">Viewers</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-							
-							<div class="sidebar-widget">
-								<!-- Sidebar Contact info -->
-								<div class="styled-box gray">
-									<h3 class="text-upper">Contact Us</h3>
-									<p>We're very approachable and would love to speak to you. Feel free to call, send us an email, Tweet us or simply complete the enquiry form.</p>
-									<ul class="contact-info list-unstyled">
-										<li class="ct-phone">+44 - 123 - 4567890</li>
-										<li class="ct-email">info@vacanzamondiale.com</li>
-										<li class="ct-facebook">www.facebook.com/vacanzamondiale</li>
-										<li class="ct-twitter">#vacanzamondiale</li>
-									</ul>
-								</div>
-							</div>
-							
-							<?php /*?><div class="sidebar-widget">
-								<!-- Sidebar Search -->
-								<div class="styled-box gray">
-									<h3 class="text-upper">Search</h3>
-									<form action="#" method="get">
-										<input type="text" name="s" class="form-control input-style1 marb20" value="Enter keyword for search" onFocus="if (this.value == 'Enter keyword for search') { this.value = ''; }" onBlur="if (this.value == '') { this.value = 'Enter keyword for search'; }" />
-										<input type="submit" name="submit" class="btn btn-primary text-upper marb20" value="Search" />
-									</form>
-								</div>
-							</div><?php */?>
-						</aside>
-						<!-- END #sidebar -->
-					</div>
-					<!-- END .row -->
-				</div>
-			</div>
-		
-		
-		
-		<!-- Analytics -->
+<body>
+    
+    <?php $this->load->view('include/header');?>
+    
+  <div class="page-header" style="background-image:url(<?php echo $asset_path; ?>images/contact-header.jpg);">
+        <div class="container">
+            <div class="row">
+                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="page-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active">Contact us</li>
+                        </ol>
+                    </div>
+                </div>
+                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="bg-white pinside30" style="opacity: 0.5;">
+                        <div class="row">
+                           <div class="col-xl-4 col-lg-4 col-md-9 col-sm-12 col-12">
+                                <h1 class="page-title">Contact Us</h1>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <!-- content start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="wrapper-content bg-white pinside40">
+                        <div class="contact-form mb60">
+                            <div class=" ">
+                                <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12 col-12">
+                                    <div class="mb60  section-title text-center  ">
+                                        <!-- section title start-->
+                                        <h1>Get In Touch</h1>
+                                        <p>Reach out to us &amp; we will respond as soon as we can.</p>
+                                    </div>
+                                </div>
+                                
+                                <form class="contact-us" method="post" action="<?php echo base_url();?>index.php/contact">
+                                        <div class=" ">
+                                            <!-- Text input-->
+                                            <div class="row">
+                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                                <div class="form-group">
+                                                    <label class="sr-only control-label" for="name">name<span class=" "> </span></label>
+                                                    <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" required>
+                                                </div>
+                                            </div>
+                                            <!-- Text input-->
+                                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                                <div class="form-group">
+                                                    <label class="sr-only control-label" for="email">Email<span class=" "> </span></label>
+                                                    <input id="email" name="email" type="email" placeholder="Email" class="form-control input-md" required>
+                                                </div>
+                                            </div>
+                                            <!-- Text input-->
+                                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                                <div class="form-group">
+                                                    <label class="sr-only control-label" for="phone">Phone<span class=" "> </span></label>
+                                                    <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control input-md" required>
+                                                </div>
+                                            </div>
+                                            <!-- Select Basic -->
+                                           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                <div class="form-group">
+                                                    <label class="control-label" for="message"> </label>
+                                                    <textarea class="form-control" id="message" rows="7" name="message" placeholder="Message"></textarea>
+                                                </div>
+                                            </div>
+                                            <!-- Button -->
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                <button type="submit" class="btn btn-default">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /.section title start-->
+                        </div>
+                        <div class="contact-us mb60">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="mb60  section-title">
+                                        <!-- section title start-->
+                                        <h1>We are here to help you </h1>
+                                        <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, .</p>
+                                    </div>
+                                    <!-- /.section title start-->
+                                </div>
+                            </div>
+                            <div class="row">
+                               <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                    <div class="bg-boxshadow pinside60 outline text-center mb30">
+                                        <div class="mb40"><i class="icon-briefcase icon-2x icon-default"></i></div>
+                                        <h2 class="capital-title">Office Address</h2>
+                                        <p>Building No 385 <br> Street no 380<br> Zone no 32 Al Markhyia Street<br>Madinet Khalifa
+                                            </p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                    <div class="bg-boxshadow pinside60 outline text-center mb30">
+                                        <div class="mb40"><i class="icon-phone-call icon-2x icon-default"></i></div>
+                                        <h2 class="capital-title">Call us at </h2>
+                                        <h1 class="text-big">+974 44341798 </h1>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+                                    <div class="bg-boxshadow pinside60 outline text-center mb30">
+                                        <div class="mb40"> <i class="icon-letter icon-2x icon-default"></i></div>
+                                        <h2 class="capital-title">Email Address</h2>
+                                        <p>RMQ.SALES@LAFARGEHOLCIM.COM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map" id="googleMap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.content end -->
+    
+        <?php $this->load->view('include/footer');?>
+    
+     
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <script>
+    function initMap() {
+        var myLatLng = {
+            lat: 23.0225,
+            lng: 72.5714
+        };
+
+        var map = new google.maps.Map(document.getElementById('googleMap'), {
+            zoom: 8,
+            center: myLatLng,
+            scrollwheel: false,
+
+        });
+        var image = 'images/map-pin.png';
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            icon: image,
+            title: 'Hello World!'
+
+        });
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?&amp;callback=initMap" async defer></script>
+    
+</body>
+
+
+</html>

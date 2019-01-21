@@ -28,9 +28,9 @@ class Home extends CI_Controller {
 		 //twitter
 		  $this->load->library('twitterfetcher');
 		
-	 $this->load->model('packages_model','package');
-	 $this->load->model('destination_model','destination');
-	  $this->load->model('packagecatagory_model','catagory');
+	// $this->load->model('packages_model','package');
+	// $this->load->model('destination_model','destination');
+	 // $this->load->model('packagecatagory_model','catagory');
 		 
 		//-----------------general detail----------------------	
 		
@@ -43,41 +43,22 @@ class Home extends CI_Controller {
 	 
 	public function index()
 	{
-		//$this->output->cache(30);
 		
-		$tweets = $this->twitterfetcher->getTweets(array(
-		'consumerKey'		=> '06C9oUSNAGQD1gguHORKxV8fl',
-		'consumerSecret'	=> 'SjFrFyGQhj1Oa0aZqlWMd38DbBhk9qjFSvKg3XZWVF2WKCtQlS',
-		'accessToken'		=> '2458523185-TbPxQyjjrYMNq02z2rSdKFeZPm6EuiAJFfIHEAi',
-		'accessTokenSecret'	=> 'fZbIspWvvbuEN5k4V7DU2a87xEj003WpBEph4NF1jxWQw',
-		'usecache' 			=> true,
-		'count' 			=> 0,
-		'numdays' 			=> 30
-	));
-	$twitterFeed = array();
-	$i= 0;
-	//var_dump($tweets);exit();
-	foreach($tweets as $twet):
-	$twitterFeed[$i] = $twet->text;
-	
-	$i++;
-	endforeach;
-	$this->data['twitterFeed'] = $twitterFeed;
 		
 		// data home package
-		$this->data['package']=$this->package->limit(8,0)->get_all();
+		//$this->data['package']=$this->package->limit(8,0)->get_all();
 		
 		// data home destination
-		$this->data['destination']=$this->destination->limit(8,0)->get_all();
+		//$this->data['destination']=$this->destination->limit(8,0)->get_all();
 			
 			//get all catagory
 			
-		$this->data['pack_catagory']=$this->catagory->limit(4,0)->get_all();
+		//$this->data['pack_catagory']=$this->catagory->limit(4,0)->get_all();
 		
 		
 		$this->load->view('home/home_view',$this->data);
 		
-		 $this->load->view('include/footer',$this->data);
+		// $this->load->view('include/footer',$this->data);
 	}
 	
 	public function email_subscription()

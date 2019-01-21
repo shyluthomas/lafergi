@@ -26,11 +26,7 @@ class About extends CI_Controller {
 		 $this->load->library('form_validation');
 		 $this->load->library('session');
 		 //twitter
-		  $this->load->library('twitterfetcher');
-		
-	 $this->load->model('Aboutus_model','about');
-	 $this->load->model('destination_model','destination');
-	 
+		 
 		 
 		//-----------------general detail----------------------	
 		
@@ -43,41 +39,12 @@ class About extends CI_Controller {
 	 
 	public function index()
 	{
-		//$this->output->cache(30);
-		
-		$tweets = $this->twitterfetcher->getTweets(array(
-		'consumerKey'		=> '4dL4fuUUQL2ByyZf7ABcnUwHy',
-		'consumerSecret'	=> 'nCZdusCkHl4OHm3sJfmMBR93XPiqSZRxsVTVkWADH82QEaXbzH',
-		'accessToken'		=> '2458523185-ozw4SCXT0mFtrneBjMf3ObhAhDBvzzFgwG2xRd1',
-		'accessTokenSecret'	=> 'd640mUskhRQwIKxMbBJVzsN8uefaJ2uZPV3oVKuwPp5RB',
-		'usecache' 			=> true,
-		'count' 			=> 0,
-		'numdays' 			=> 30
-	));
-	$twitterFeed = array();
-	$tweetsFooter = array();
-	$tweetsData = array();
-	$i= 0;
-	foreach($tweets as $twet):
-	$twitterFeed[$i] = $twet->text;
-	$tweetsData[$i] = $twet;
-	$i++;
-	endforeach;
-	$this->data['twitterFeed'] = $twitterFeed;
-	$this->data['tweetsData'] = $tweetsData;
-		
-		// data home package
-		//$this->data['package']=$this->package->limit(8,0)->get_all();
-		
-		// data home destination
-		$this->data['destination']=$this->destination->limit(4,0)->get_all();
-			
-		$this->data['aboutData'] = $this->about->get_all();
 		
 		
-		$this->load->view('aboutus/about_view',$this->data);
 		
-		 $this->load->view('include/footer',$this->data);
+		$this->load->view('about/about_view',$this->data);
+		
+		// $this->load->view('include/footer',$this->data);
 	}
 	
 	public function email_subscription()
