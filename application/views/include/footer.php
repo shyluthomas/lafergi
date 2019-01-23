@@ -2,11 +2,11 @@
 $asset_path = base_url().'assets/frontend/';
 $asset_path_backend = base_url().'assets/backend/';
 
-//$test = @mysql_query("select * from tbl_testimonial limit 1");
-//if(@mysql_num_rows($test)>0){
-//	
-//	$testDt = @mysql_fetch_object($test);	
-//}
+$test = @mysql_query("select * from tbl_contact");
+if(@mysql_num_rows($test)>0){
+	
+	$testDt = @mysql_fetch_object($test);	
+}
 ?>
 <div class="footer section-space50">
         <!-- footer -->
@@ -21,18 +21,18 @@ $asset_path_backend = base_url().'assets/backend/';
                         
                 <div class="footer-logo">
                         <!-- Footer Logo -->
-                        <img src="images/ft-logo.png" alt="Qatar Readymix LLCs">
+                        <img src="<?php echo $asset_path; ?>images/ft-logo.png" alt="Qatar Readymix LLCs">
                     <!-- /.Footer Logo -->
                 </div>
                         
                         
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-                                <p class="address-text"><span><i class="icon-placeholder-3 icon-1x"></i> </span>Building No 385
-Street no 380 <br>Zone no 32 Al Markhyia Street Madinet Khalifa </p>
+                                <p class="address-text"><span><i class="icon-placeholder-3 icon-1x"></i> </span>
+                                  <?php echo nl2br($testDt->office_address);?>  
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-                                <p class="call-text"><span><i class="icon-phone-call icon-1x"></i></span>+974 44341798</p>
+                                <p class="call-text"><span><i class="icon-phone-call icon-1x"></i></span><?php echo $testDt->contact;?></p>
                             </div>
                         </div>
                     </div>
@@ -42,12 +42,12 @@ Street no 380 <br>Zone no 32 Al Markhyia Street Madinet Khalifa </p>
                     <div class="widget-footer mt40">
                         <!-- widget footer -->
                         <ul class="listnone">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="solutions.html">Our Solution</a></li>
-                            <li><a href="products.html">Our Products</a></li>
-                            <li><a href="career.html">Career</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/home">Home</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/about">About Us</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/solutions">Our Solution</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/products">Our Products</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/careers">Career</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <!-- /.widget footer -->
@@ -56,12 +56,12 @@ Street no 380 <br>Zone no 32 Al Markhyia Street Madinet Khalifa </p>
                     <div class="widget-footer mt40">
                         <!-- widget footer -->
                         <ul class="listnone">
-                            <li><a href="#">Health</a></li>
-                            <li><a href="#">Safety</a></li>
-                            <li><a href="#">Environment</a></li>
-                            <li><a href="#">Road Transport</a></li>
-                            <li><a href="#">Policy</a></li>
-                            <li><a href="#">Welfare</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/health_saftey">Health</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/health_saftey">Safety</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/health_saftey">Environment</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/health_saftey">Road Transport</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/health_saftey">Policy</a></li>
+                            <li><a href="<?php echo base_url();?>index.php/health_saftey">Welfare</a></li>
                         </ul>
                     </div>
                     <!-- /.widget footer -->

@@ -130,7 +130,7 @@ $image_path = base_url().'images/';
                                     <div class="mb60  section-title">
                                         <!-- section title start-->
                                         <h1>We are here to help you </h1>
-                                        <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, .</p>
+                                        <p class="lead"> <?php echo $contact['content'];?></p>
                                     </div>
                                     <!-- /.section title start-->
                                 </div>
@@ -140,7 +140,7 @@ $image_path = base_url().'images/';
                                     <div class="bg-boxshadow pinside60 outline text-center mb30">
                                         <div class="mb40"><i class="icon-briefcase icon-2x icon-default"></i></div>
                                         <h2 class="capital-title">Office Address</h2>
-                                        <p>Building No 385 <br> Street no 380<br> Zone no 32 Al Markhyia Street<br>Madinet Khalifa
+                                        <p><?php echo nl2br($contact['office_address']);?>
                                             </p>
                                     </div>
                                 </div>
@@ -148,19 +148,21 @@ $image_path = base_url().'images/';
                                     <div class="bg-boxshadow pinside60 outline text-center mb30">
                                         <div class="mb40"><i class="icon-phone-call icon-2x icon-default"></i></div>
                                         <h2 class="capital-title">Call us at </h2>
-                                        <h1 class="text-big">+974 44341798 </h1>
+                                        <h1 class="text-big"><?php echo nl2br($contact['contact']);?></h1>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                                     <div class="bg-boxshadow pinside60 outline text-center mb30">
                                         <div class="mb40"> <i class="icon-letter icon-2x icon-default"></i></div>
                                         <h2 class="capital-title">Email Address</h2>
-                                        <p>RMQ.SALES@LAFARGEHOLCIM.COM</p>
+                                        <p><?php echo nl2br($contact['email']);?></p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="map" id="googleMap"></div>
+                        <div class="map" id="googleMap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3606.088130867346!2d51.47361211448711!3d25.334823532321337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBuilding+No+385+Street+no+380++Zone+no+32+Al+Markhyia+Street+Madinet+Khalifa!5e0!3m2!1sen!2sin!4v1548271785040" width="1000" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,25 +176,25 @@ $image_path = base_url().'images/';
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
      <script>
     function initMap() {
-        var myLatLng = {
-            lat: 23.0225,
-            lng: 72.5714
-        };
-
-        var map = new google.maps.Map(document.getElementById('googleMap'), {
-            zoom: 8,
-            center: myLatLng,
-            scrollwheel: false,
-
-        });
-        var image = 'images/map-pin.png';
-        var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            icon: image,
-            title: 'Hello World!'
-
-        });
+//        var myLatLng = {
+//            lat: 23.0225,
+//            lng: 72.5714
+//        };
+//
+//        var map = new google.maps.Map(document.getElementById('googleMap'), {
+//            zoom: 8,
+//            center: myLatLng,
+//            scrollwheel: false,
+//
+//        });
+//        var image = 'images/map-pin.png';
+//        var marker = new google.maps.Marker({
+//            position: myLatLng,
+//            map: map,
+//            icon: image,
+//            title: 'Hello World!'
+//
+//        });
     }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?&amp;callback=initMap" async defer></script>

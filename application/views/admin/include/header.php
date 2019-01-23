@@ -208,6 +208,19 @@
 						</div>
                     
                      <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
+                    Manage Health and saftey</a>
+
+						<div class="submenu">
+
+						<ul>
+
+						<li><a href="<?php echo site_url(); ?>/backend/health_saftey/">  Manage Health and saftey</a></li>
+						
+						</ul>
+
+						</div>
+                    
+                     <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
                     Manage Contact</a>
 
 						<div class="submenu">
@@ -220,34 +233,7 @@
 
 						</div>
                         
-                        
-                        <a class="menuitem submenuheader" href="" ><img src="<?php echo $admin_image_path;?>menuicon_Offers.png" alt="">&nbsp 
-                    Packages</a>
-
-						<div class="submenu">
-
-						<ul>
-
-						<li><a href="<?php echo site_url(); ?>/backend/packages">Manage Packages</a></li>
-                        
-                         <?php
-						$test = @mysql_query("select * from tbl_packages");
-						if(@mysql_num_rows($test)>0){
-							while($test_dt = @mysql_fetch_array($test))
-							{
-						?>
-								<li><a href="<?php echo site_url(); ?>/backend/packages/addPackageDetail/<?php echo $test_dt['id'];?>">
-								Itenary : <?php echo $test_dt['title'];?></a></li>
-                    
-                  	  <?php
-							}
-						}
-							?>
-						
-						</ul>
-
-						</div>
-                        
+                       
                                                 
                         
 

@@ -26,7 +26,7 @@ class Careers extends CI_Controller {
 		 $this->load->library('form_validation');
 		 $this->load->library('session');
 		 //twitter
-		 
+		 $this->load->model('careers_model','careers');
 		 
 		//-----------------general detail----------------------	
 		
@@ -40,9 +40,20 @@ class Careers extends CI_Controller {
 	public function index()
 	{
 		
-		
+		$this->data['careers']=$this->careers->get_all();
 		
 		$this->load->view('careers/careers_view',$this->data);
+		
+		// $this->load->view('include/footer',$this->data);
+	}
+    public function detail($id)
+	{
+		
+		$this->data['arr_view']=$this->careers->get_row_detail($id);
+		
+		 
+		
+		$this->load->view('careers/careers_details_view',$this->data);
 		
 		// $this->load->view('include/footer',$this->data);
 	}

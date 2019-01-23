@@ -26,7 +26,7 @@ class Products extends CI_Controller {
 		 $this->load->library('form_validation');
 		 $this->load->library('session');
 		 //twitter
-		 
+		 $this->load->model('products_model','products');
 		 
 		//-----------------general detail----------------------	
 		
@@ -40,9 +40,20 @@ class Products extends CI_Controller {
 	public function index()
 	{
 		
-		
+		$this->data['products'] = $this->products->get_all();
 		
 		$this->load->view('products/products_view',$this->data);
+		
+		// $this->load->view('include/footer',$this->data);
+	}
+    public function detail($id)
+	{
+		
+		$this->data['arr_view']=$this->products->get_row_detail($id);
+		
+		 
+		
+		$this->load->view('products/products_details_view',$this->data);
 		
 		// $this->load->view('include/footer',$this->data);
 	}

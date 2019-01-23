@@ -27,7 +27,7 @@ class Contact extends CI_Controller {
 		 $this->load->library('session');
 		 //twitter
 		  
-		 
+		  $this->load->model('contact_model','contact');
 		//-----------------general detail----------------------	
 		
 		$this->data['page']='Contact';
@@ -40,7 +40,7 @@ class Contact extends CI_Controller {
 	public function index()
 	{
 		//$this->output->cache(30);
-		
+		$this->data['contact']=$this->contact->get_all()[0];
 		
 		if($this->input->post('submit')){
 			$arr_form = $_POST;

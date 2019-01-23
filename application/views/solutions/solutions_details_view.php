@@ -42,22 +42,22 @@ $image_path = base_url().'images/';
     
     <?php $this->load->view('include/header');?>
     
-    <div class="page-header" style="background-image:url(<?php echo $asset_path;?>images/career-header.jpg);">
+    <div class="page-header" style="background-image:url(<?php echo $asset_path; ?>images/products-header.jpg);">
         <div class="container">
             <div class="row">
-               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb">
                             <li><a href="index.html">Home</a></li>
-                            <li class="active">Career</li>
+                            <li class="active">Solutions Detail</li>
                         </ol>
                     </div>
                 </div>
-               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="bg-white pinside30" style="opacity: 0.5;">
                         <div class="row">
                            <div class="col-xl-4 col-lg-4 col-md-9 col-sm-12 col-12">
-                                <h1 class="page-title">Career</h1>
+                                <h1 class="page-title">Solutions Detail</h1>
                             </div>
                             
                         </div>
@@ -67,45 +67,31 @@ $image_path = base_url().'images/';
             </div>
         </div>
     </div>
-    <!-- content start -->
+   
     <div class="container">
-        <div class="row">
-             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="wrapper-content bg-white pinside40">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="wrapper-content bg-white ">
+            <div class="about-section pinside20">
+
                     <div class="row">
-                      <?php foreach($careers as $career):?>  
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                            <div class="card-listing">
-                                <!-- card listing -->
-                                
-                                <div class="card-content">
-                                    <h3 class="card-name"><a href="#" class="title"><?php echo $career['title'];?></a></h3>
-                                    <div class="card-features ">
-                                        <ul class="listnone">
-                                            <li><?php echo $career['description'];?></li>
-                                            <li><?php echo $career['qualification'];?></li>
-                                            <li> <?php echo substr($career['content'],0,100);?></li>
-                                        </ul>
-                                    </div>
-                                    <!--<a href="#" class="btn btn-default btn-sm">Apply Now</a>-->
-                                    <a href="<?php echo site_url().'/careers/detail/'.$career['id'];?>" class="btn-link"> Read More</a>
-                                </div>
-                            </div>
-                            <!-- /.card listing -->
-                        </div>
-                       <?php endforeach;?> 
-                        
-                         
-                            <!-- /.card listing -->
-                        </div>
+                    <div class="col-md-12 col-sm-12">
+                        <h1 class="mb30"> <?php echo $arr_view['title'];?></h1>
+                      <h1 class="mb30"><img src="<?php echo $asset_path_backend;?>/images/solutions/<?php echo $arr_view['image']; ?>" alt="logo"/></h1>
+                      <p class="lead mb30">
+                          <?php echo $arr_view['content'];?>
+                        </p>
+                      
                     </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
     </div>
-    <!-- /.content end -->
     
-    <?php $this->load->view('include/footer');?>
+    
+        <?php $this->load->view('include/footer');?>
     
      
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

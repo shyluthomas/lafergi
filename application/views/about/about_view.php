@@ -77,20 +77,18 @@ $image_path = base_url().'images/';
                             <div class="row">
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                     <h2 class="mb30">Who We Are?</h2>
-                                    <p class="lead mb30">Insight loan advisors is completely independent loan advising service and our directory of lenders gives you all the information lorem ipsums sitamets.</p>
-                                    <p>Vestibulum condimentum neque at interdum dignissim. Integer colutpat vel lorem ac fringilla. Vestibulum porttitor euismod udiam viverra euismod non hendrerit eros. </p>
+                                    <p class="lead mb30"><?php echo $who_we_are['content']?> </p>
                                 </div>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                     <div class="mb60">
                                         <h2 class="mb30">What We Offer?</h2>
-                                        <p class="lead mb30">Our loan sanction is one of the quicke with eas documentation and doorstep lorem ipsum serviceullam dolor sitisi.</p>
-                                        <p>Nullam tincidunt ligula purus, eget aliquet urna maximus id. lorem nisi vel sapien sollicitudin rutrum.Quisque sed felis metus Intocus pellentesque nisi eu mollis.</p>
+                                        <p class="lead mb30"><?php echo $what_we_offer['content']?></p>
                                     </div>
                                 </div>
                                 <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 col-md-12 col-sm-12 col-12">
                                     <div class="text-center section-space80">
                                         <h2>Our Vision &amp; Mission</h2>
-                                        <p>Our goal at Insight Loan Advisors is to provide access to personal loans, car loan, at insight competitive interest raa timely mannerlorem ipsums deconse resonescon.</p>
+                                        <p><?php echo $vision_mission['content']?></p>
                                     </div>
                                 </div>
                             </div>

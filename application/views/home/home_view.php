@@ -70,8 +70,8 @@ $image_path = base_url().'images/';
                 <div class="offset-xl-2 col-xl-8 offset-md-2 col-md-8 offset-md-2 col-md-8 col-sm-12 col-12">
                     <div class="mb60 text-center section-title">
                         <!-- section title start-->
-                        <h1><?php echo $home_content['title']?>Welcome To Readymix Qatar LLC</h1>
-                        <p class="text-justify"> <?php echo $home_content['content']?> </p>
+                        <h1><?php echo $home_content['title']?></h1>
+                        <p > <?php echo stripslashes($home_content['content']);?> </p>
                     </div>
                     
                     <div class="mb60 text-center section-title">
@@ -92,8 +92,8 @@ $image_path = base_url().'images/';
                         <div class="bg-white pinside40 service-block outline mb30">
             <div class="icon mb40"> <img src="<?php echo $asset_path_backend; ?>images/solutions/thump/<?php echo $solution['image'];?>" alt="Mixed-use Developments"> </div>
                             <h2><a href="#" class="title"><?php echo $solution['title'];?></a></h2>
-                            <p> <?php echo $solution['description']?> </p>
-                            <a href="#" class="btn-link">Read More</a> </div>
+                            <p> <?php echo stripslashes($solution['description']);?> </p>
+                            <a href="<?php echo site_url().'/solutions/detail/'.$solution['id'];?>" class="btn-link">Read More</a> </div>
                     </div>
                     
                   <?php endforeach; ?>  

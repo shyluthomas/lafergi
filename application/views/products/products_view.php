@@ -74,102 +74,27 @@ $image_path = base_url().'images/';
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="wrapper-content bg-white pinside40">
                         <div class="row">
+                            <?php foreach($products as $product):?>
                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div class="">
                                     <div class="post-block mb30">
                                         <div class="post-img">
-                                            <a href="blog-single.html" class="imghover"><img src="<?php echo $asset_path; ?>images/blog-post-1.jpg" alt="Borrow - Loan Company Website Template" class="img-fluid"></a>
+                                            <a href="blog-single.html" class="imghover"><img src="<?php echo $asset_path_backend.'images/products/'.$product['image']; ?>" alt="Borrow - Loan Company Website Template" class="img-fluid"></a>
                                         </div>
                                         <div class="bg-white pinside40 outline">
                                             <div class="post-header">
-                                                <h1><a href="blog-single.html" class="title">Lorem Ipsum is simply </a></h1>
+                                                <h1><a href="blog-single.html" class="title"><?php echo $product['title']?> </a></h1>
                                                 
                                             </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                            <a href="#" class="btn-link">Read More</a> </div>
+                                            <p><?php echo substr($product['content'],0,150);?> </p>
+                                            <a href="<?php echo site_url().'/products/detail/'.$product['id'];?>" class="btn-link">Read More</a> </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="">
-                                    <div class="post-block mb30">
-                                        <div class="post-img">
-                                            <a href="blog-single.html" class="imghover"><img src="<?php echo $asset_path; ?>images/blog-post-1.jpg" alt="Borrow - Loan Company Website Template" class="img-fluid"></a>
-                                        </div>
-                                        <div class="bg-white pinside40 outline">
-                                            <div class="post-header">
-                                                <h1><a href="blog-single.html" class="title">Lorem Ipsum is simply </a></h1>
-                                                
-                                            </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                            <a href="#" class="btn-link">Read More</a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="">
-                                    <div class="post-block mb30">
-                                        <div class="post-img">
-                                            <a href="blog-single.html" class="imghover"><img src="<?php echo $asset_path; ?>images/blog-post-1.jpg" alt="Borrow - Loan Company Website Template" class="img-fluid"></a>
-                                        </div>
-                                        <div class="bg-white pinside40 outline">
-                                            <div class="post-header">
-                                                <h1><a href="blog-single.html" class="title">Lorem Ipsum is simply </a></h1>
-                                                
-                                            </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                            <a href="#" class="btn-link">Read More</a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="">
-                                    <div class="post-block mb30">
-                                        <div class="post-img">
-                                            <a href="blog-single.html" class="imghover"><img src="<?php echo $asset_path; ?>images/blog-post-1.jpg" alt="Borrow - Loan Company Website Template" class="img-fluid"></a>
-                                        </div>
-                                        <div class="bg-white pinside40 outline">
-                                            <div class="post-header">
-                                                <h1><a href="blog-single.html" class="title">Lorem Ipsum is simply </a></h1>
-                                                
-                                            </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                            <a href="#" class="btn-link">Read More</a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="">
-                                    <div class="post-block mb30">
-                                        <div class="post-img">
-                                            <a href="blog-single.html" class="imghover"><img src="<?php echo $asset_path; ?>images/blog-post-1.jpg" alt="Borrow - Loan Company Website Template" class="img-fluid"></a>
-                                        </div>
-                                        <div class="bg-white pinside40 outline">
-                                            <div class="post-header">
-                                                <h1><a href="blog-single.html" class="title">Lorem Ipsum is simply </a></h1>
-                                                
-                                            </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                            <a href="#" class="btn-link">Read More</a> </div>
-                                    </div>
-                                </div>
-                            </div>
-                       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                <div class="">
-                                    <div class="post-block mb30">
-                                        <div class="post-img">
-                                            <a href="blog-single.html" class="imghover"><img src="<?php echo $asset_path; ?>images/blog-post-1.jpg" alt="Borrow - Loan Company Website Template" class="img-fluid"></a>
-                                        </div>
-                                        <div class="bg-white pinside40 outline">
-                                            <div class="post-header">
-                                                <h1><a href="blog-single.html" class="title">Lorem Ipsum is simply </a></h1>
-                                                
-                                            </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
-                                            <a href="#" class="btn-link">Read More</a> </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php endforeach;?>
+                            
+                          
+                      
                             <div class="col-xl-12 col-lg-12 col-md-12 text-center col-sm-12 col-12">
                                 <div class="st-pagination">
                                     <!--st-pagination-->

@@ -41,7 +41,7 @@ $image_path = base_url().'images/';
                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-6 col-6">
                     <!-- logo -->
                     <div class="logo">
-                        <a href="index.html"><img src="<?php echo $asset_path; ?>images/logo.png" alt="Qatar Readymix LLC"/></a>
+                        <a href="<?php echo base_url();?>"><img src="<?php echo $asset_path; ?>images/logo.png" alt="Qatar Readymix LLC"/></a>
                     </div>
                 </div>
                 <!-- logo -->

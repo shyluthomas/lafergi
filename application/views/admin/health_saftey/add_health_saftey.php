@@ -19,7 +19,8 @@ tinymce.init({
 
         	<div class="pageWise_TTL">
 
-            	<div class="pageName"><img src="<?php echo $admin_image_path; ?>bsns_icon1.png" alt=""> Edit Contact</div>
+            	<div class="pageName"><img src="<?php echo $admin_image_path; ?>bsns_icon1.png" alt=""> Add health saftey</div>
+                <div class="pageName" style="float:right;"> <a href="<?php  echo site_url(); ?>/backend/health_saftey/add">Add New</a></div>
 
                <!-- <ul>
 
@@ -34,12 +35,11 @@ tinymce.init({
             </div>
 
            			 <div class="clearfix">
-                                   <h3 style="margin:5px 0px 15px 210px; color:#F00;">
-				</h3>
+                                   <h3 style="margin:5px 0px 15px 210px; color:#F00;"><?php if(isset($alert)){ echo $alert; } ?></h3>
                                 </div>
 			<form name="add_properties" method="post" enctype="multipart/form-data">
-            <?php //foreach ($arr_view as $view):?>
-            <div class="frmFieldTTL"><span>Edit Contact</span></div>
+            
+            <div class="frmFieldTTL"><span>ADD Health saftey</span></div>
 
             <div class="frmFieldContent">
 
@@ -47,37 +47,55 @@ tinymce.init({
 
 					<div class="frmFieldItem">
 
-                    	<span>Office address </span>
-                        <textarea name="office_address" required="required"><?php echo $arr_view['office_address']; ?></textarea>
-                     
+                    	<span>Title </span>
+
+                     <input  value="" type="text" class="txtbx" placeholder="Enter  here." name="title" required="required">
                     </div>
                     
-                    	<div class="frmFieldItem">
+                    
+                    <div class="frmFieldItem">
 
-                    	<span>Contact </span>
+                    	<span>Description </span>
 
-                     <input value="<?php echo $arr_view['contact']; ?>" type="text" class="txtbx" placeholder="Enter  here." name="contact" required="required">
+                     <textarea name="description" ></textarea>
+                    </div>
+                    
+                     <div class="frmFieldItem">
+
+                    	<span>Catagory </span>
+
+                     <select class="txtbx" name="catagory">
+                         <option value="">select</option>
+                            <option value="Health">Health</option>   
+                         <option value="Safty">Safty</option>   
+                         <option value="Road">Road</option>   
+                         <option value="Environment">Environment</option>   
+                         <option value="Welfare">Welfare</option>   
+                         <option value="Policy">Policy</option>   
+                    </select>
+                    </div>
+                    
+                    
+						 <input value="123" type="hidden" class="txtbx" placeholder="Enter  here." name="temperature" >
+                  
+                    
+                   
+
+                    <div class="frmFieldItemExtraLarge">
+
+                    	<div class="tiny_label"> Content</div>
+
+                        <div class="tiny_text"><textarea name="content" id="tiny"></textarea></div>
+
                     </div>
                     
                     <div class="frmFieldItem">
 
-                    	<span>Email </span>
+                    	<span>Image </span>
 
-                     <input value="<?php echo $arr_view['email']; ?>" type="text" class="txtbx" placeholder="Enter  here." name="email" required="required">
+                    <input type="file" name="image" />
+                     <input type="hidden" value="" name="imageid1"/>
                     </div>
-                    
-                    
-                    
-
-                    <div class="frmFieldItemExtraLarge">
-
-                    	<div class="tiny_label">Content</div>
-
-                        <div class="tiny_text"><textarea name="content" id="tiny"><?php echo $arr_view['content'];?></textarea></div>
-
-                    </div>
-                    
-                    
                     
                     
 
@@ -88,7 +106,7 @@ tinymce.init({
             </div>
             </div>
             </div>
-            <?php //endforeach;?>
+            
             <div class="frmFieldBtnSave_here">
 
 				<input name="save" type="submit" class="btnSave1" title="Save" style="color:transparent;" value="ll">

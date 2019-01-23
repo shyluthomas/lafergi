@@ -26,7 +26,10 @@ class About extends CI_Controller {
 		 $this->load->library('form_validation');
 		 $this->load->library('session');
 		 //twitter
-		 
+		 	 $this->load->model('what_we_offer_model','what_we_offer');
+         	 $this->load->model('who_we_are_model','who_we_are');
+         	 $this->load->model('vision_mission_model','vision_mission');
+         
 		 
 		//-----------------general detail----------------------	
 		
@@ -40,7 +43,9 @@ class About extends CI_Controller {
 	public function index()
 	{
 		
-		
+        $this->data['what_we_offer']=$this->what_we_offer->limit(1,0)->get_all()[0];
+         $this->data['who_we_are']=$this->who_we_are->limit(1,0)->get_all()[0];
+         $this->data['vision_mission']=$this->vision_mission->limit(1,0)->get_all()[0];
 		
 		$this->load->view('about/about_view',$this->data);
 		

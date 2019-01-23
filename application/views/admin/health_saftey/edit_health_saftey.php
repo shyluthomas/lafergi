@@ -19,7 +19,8 @@ tinymce.init({
 
         	<div class="pageWise_TTL">
 
-            	<div class="pageName"><img src="<?php echo $admin_image_path; ?>bsns_icon1.png" alt=""> Edit Contact</div>
+            	<div class="pageName"><img src="<?php echo $admin_image_path; ?>bsns_icon1.png" alt=""> Edit health saftey</div>
+               
 
                <!-- <ul>
 
@@ -34,12 +35,11 @@ tinymce.init({
             </div>
 
            			 <div class="clearfix">
-                                   <h3 style="margin:5px 0px 15px 210px; color:#F00;">
-				</h3>
+                                   <h3 style="margin:5px 0px 15px 210px; color:#F00;"><?php if(isset($alert)){ echo $alert; } ?></h3>
                                 </div>
 			<form name="add_properties" method="post" enctype="multipart/form-data">
-            <?php //foreach ($arr_view as $view):?>
-            <div class="frmFieldTTL"><span>Edit Contact</span></div>
+            
+            <div class="frmFieldTTL"><span>Edit health saftey</span></div>
 
             <div class="frmFieldContent">
 
@@ -47,37 +47,52 @@ tinymce.init({
 
 					<div class="frmFieldItem">
 
-                    	<span>Office address </span>
-                        <textarea name="office_address" required="required"><?php echo $arr_view['office_address']; ?></textarea>
-                     
-                    </div>
-                    
-                    	<div class="frmFieldItem">
+                    	<span>Title </span>
 
-                    	<span>Contact </span>
-
-                     <input value="<?php echo $arr_view['contact']; ?>" type="text" class="txtbx" placeholder="Enter  here." name="contact" required="required">
+                     <input  value="<?php echo $arr_view['title'];?>" type="text" class="txtbx" placeholder="Enter  here." name="title" required="required">
                     </div>
                     
                     <div class="frmFieldItem">
 
-                    	<span>Email </span>
+                    	<span>Description </span>
 
-                     <input value="<?php echo $arr_view['email']; ?>" type="text" class="txtbx" placeholder="Enter  here." name="email" required="required">
+                     <textarea name="description" ><?php echo $arr_view['description'];?></textarea>
                     </div>
                     
+                      <div class="frmFieldItem">
+
+                    	<span>Catagory </span>
+
+                     <select class="txtbx" name="catagory">
+                         <option value="">select</option>
+                            <option value="Health" <?php if($arr_view['catagory'] == 'Health') { echo 'selected';} ?> >Health</option>   
+                         <option value="Safty" <?php if($arr_view['catagory'] == 'Safty') { echo 'selected';} ?> >Safty</option>   
+                         <option value="Road" <?php if($arr_view['catagory'] == 'Road') { echo 'selected';} ?> >Road</option>   
+                         <option value="Environment" <?php if($arr_view['catagory'] == 'Road') { echo 'selected';} ?> >Environment</option>   
+                         <option value="Welfare" <?php if($arr_view['catagory'] == 'Welfare') { echo 'selected';} ?> >Welfare</option>   
+                         <option value="Policy" <?php if($arr_view['catagory'] == 'Policy') { echo 'selected';} ?> >Policy</option>   
+                    </select>
+                    </div>
+                  
+                   
                     
-                    
+                   
 
                     <div class="frmFieldItemExtraLarge">
 
-                    	<div class="tiny_label">Content</div>
+                    	<div class="tiny_label"> Content</div>
 
                         <div class="tiny_text"><textarea name="content" id="tiny"><?php echo $arr_view['content'];?></textarea></div>
 
                     </div>
                     
-                    
+                    <div class="frmFieldItem">
+
+                    	<span>Image </span>
+
+                    <input type="file" name="image" />
+                     <input type="hidden" value="<?php echo $arr_view['image'];?>" name="imageid1"/>
+                    </div>
                     
                     
 
@@ -88,7 +103,7 @@ tinymce.init({
             </div>
             </div>
             </div>
-            <?php //endforeach;?>
+            
             <div class="frmFieldBtnSave_here">
 
 				<input name="save" type="submit" class="btnSave1" title="Save" style="color:transparent;" value="ll">

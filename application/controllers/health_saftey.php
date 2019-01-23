@@ -26,7 +26,7 @@ class Health_saftey extends CI_Controller {
 		 $this->load->library('form_validation');
 		 $this->load->library('session');
 		 //twitter
-		 
+		 $this->load->model('health_saftey_model','health_saftey');
 		 
 		//-----------------general detail----------------------	
 		
@@ -39,7 +39,25 @@ class Health_saftey extends CI_Controller {
 	 
 	public function index()
 	{
-		
+		$arr_where_Health = array('catagory' => 'Health');
+		$this->data['Health']=$this->health_saftey->get_row_where($arr_where_Health);
+        
+        $arr_where_Safty = array('catagory' => 'Safty');
+		$this->data['Safty']=$this->health_saftey->get_row_where($arr_where_Safty);
+        
+         $arr_where_Road = array('catagory' => 'Road');
+		$this->data['Road']=$this->health_saftey->get_row_where($arr_where_Road);
+        
+         $arr_where_Environment = array('catagory' => 'Environment');
+		$this->data['Environment']=$this->health_saftey->get_row_where($arr_where_Environment);
+        
+         $arr_where_Welfare = array('catagory' => 'Welfare');
+		$this->data['Welfare']=$this->health_saftey->get_row_where($arr_where_Welfare);
+        
+         $arr_where_Policy = array('catagory' => 'Policy');
+		$this->data['Policy']=$this->health_saftey->get_row_where($arr_where_Policy);
+        
+       //var_dump($this->data);
 		
 		
 		$this->load->view('health_saftey/health_saftey_view',$this->data);

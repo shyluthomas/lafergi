@@ -49,7 +49,7 @@ $image_path = base_url().'images/';
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb">
                             <li><a href="index.html">Home</a></li>
-                            <li class="active">Career</li>
+                            <li class="active">Career Details</li>
                         </ol>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ $image_path = base_url().'images/';
                     <div class="bg-white pinside30" style="opacity: 0.5;">
                         <div class="row">
                            <div class="col-xl-4 col-lg-4 col-md-9 col-sm-12 col-12">
-                                <h1 class="page-title">Career</h1>
+                                <h1 class="page-title">Career Details</h1>
                             </div>
                             
                         </div>
@@ -68,41 +68,43 @@ $image_path = base_url().'images/';
         </div>
     </div>
     <!-- content start -->
-    <div class="container">
-        <div class="row">
-             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <div class="wrapper-content bg-white pinside40">
-                    <div class="row">
-                      <?php foreach($careers as $career):?>  
-                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                            <div class="card-listing">
-                                <!-- card listing -->
-                                
-                                <div class="card-content">
-                                    <h3 class="card-name"><a href="#" class="title"><?php echo $career['title'];?></a></h3>
-                                    <div class="card-features ">
-                                        <ul class="listnone">
-                                            <li><?php echo $career['description'];?></li>
-                                            <li><?php echo $career['qualification'];?></li>
-                                            <li> <?php echo substr($career['content'],0,100);?></li>
-                                        </ul>
-                                    </div>
-                                    <!--<a href="#" class="btn btn-default btn-sm">Apply Now</a>-->
-                                    <a href="<?php echo site_url().'/careers/detail/'.$career['id'];?>" class="btn-link"> Read More</a>
-                                </div>
-                            </div>
-                            <!-- /.card listing -->
-                        </div>
-                       <?php endforeach;?> 
+    
+   
+    <div class=" ">
+        <!-- content start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="wrapper-content bg-white">
+                        <div class="section-scroll pinside60" id="section-about">
+                            <h1>About Job</h1>
+                            <p class="lead">
+                                <?php echo $arr_view['content'];?>
+                            </p>
+                           
+                            <a href="#" class="btn btn-default">Apply for Job</a> </div>
                         
-                         
-                            <!-- /.card listing -->
+                        
+                        
+                        
+                        
+                        
+                        <div class="widget-share">
+                            <ul class="listnone">
+                                <li><a href="#" class="btn-share btn-facebook" title="Share on Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="btn-share btn-twitter" title="Share on Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li>
+                                    <a href="#" class="btn-share btn-google" title="Share on Google"> <i class="fa fa-google"></i></a>
+                                </li>
+                                <li><a href="#" class="btn-share btn-linkedin" title="Share on Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- /.content end -->
     <!-- /.content end -->
     
     <?php $this->load->view('include/footer');?>
